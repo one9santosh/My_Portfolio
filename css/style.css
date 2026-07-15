@@ -1990,13 +1990,18 @@ font-size:34px;
 .achievement-grid,
 .highlight-grid,
 .service-grid,
-.tool-grid,
 .metrics,
 .gallery-grid,
 .creative-grid,
 .certificate-grid{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
+
+}
+
+.tool-grid{
+
+    grid-template-columns:repeat(2,1fr);
 
 }
 
