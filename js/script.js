@@ -226,29 +226,37 @@ reveal();
 
 /*=============================
 
-Gallery Lightbox
+Image Lightbox
 
 =============================*/
 
-const galleryImages=document.querySelectorAll(".gallery-item img");
+document.body.addEventListener("click", event => {
 
-galleryImages.forEach(img=>{
+const img = event.target.closest("img");
 
-img.addEventListener("click",()=>{
+if(!img || img.closest('.hero')) return;
 
-const light=document.createElement("div");
+const light = document.createElement("div");
 
-light.className="lightbox";
+light.className = "lightbox";
 
-light.innerHTML=`<img src="${img.src}">`;
+light.innerHTML = `<div class="lightbox-content"><button class="lightbox-close" aria-label="Close">×</button><img src="${img.src}" alt="${img.alt || 'Preview'}"></div>`;
 
 document.body.appendChild(light);
 
-light.onclick=()=>{
+const closeButton = light.querySelector('.lightbox-close');
+
+closeButton.addEventListener('click', event => {
+
+event.stopPropagation();
 
 light.remove();
 
-}
+});
+
+light.addEventListener('click', () => {
+
+light.remove();
 
 });
 
