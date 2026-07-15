@@ -1852,25 +1852,33 @@ bottom:auto;
 
 .hero-buttons{
 
-display:flex;
+        display:flex;
 
-flex-direction:column;
+        justify-content:center;
 
-align-items:center;
+        align-items:center;
 
-gap:14px;
+        gap:14px;
 
-}
+        flex-wrap:wrap;
 
-.hero-buttons a{
+        width:100%;
 
-width:100%;
+    }
 
-max-width:320px;
+    .hero-buttons a{
 
-}
+        flex:1 1 auto;
 
-.hero-social{
+        min-width:150px;
+
+        max-width:240px;
+
+        text-align:center;
+
+    }
+
+    .hero-social{
 
 display:flex;
 
@@ -1896,51 +1904,11 @@ margin-top:24px;
 
     border-radius:50%;
 
-    background:var(--primary);
+        background:#ffffff;
 
-    color:#ffffff;
-    border:1px solid rgba(255,255,255,0.06);
+        color:var(--dark);
 
-    transition:transform .25s ease, box-shadow .25s ease;
-
-}
-
-.hero-social a:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 12px 24px rgba(37,99,235,0.18);
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:14px;
-
-}
-
-.hero-buttons a{
-
-width:100%;
-
-text-align:center;
-
-}
-
-.hero-right .image-box{
-
-max-width:320px;
-
-margin:auto;
-
-}
-
+        border:1px solid rgba(15,23,42,0.12);
 .about-wrapper{
 
 grid-template-columns:1fr;
